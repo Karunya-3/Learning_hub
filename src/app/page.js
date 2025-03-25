@@ -6,7 +6,16 @@ export default function Home() {
   return (
     <main className="container">
       <div className="stars" />
-      
+
+      {/* Top Navigation Buttons */}
+      <div className="top-bar">
+        <button className="nav-btn">👤 Profile</button>
+        <div className="auth-buttons">
+          <button className="nav-btn">Sign In</button>
+          <button className="nav-btn">Sign Up</button>
+        </div>
+      </div>
+
       <h1 className="title">AI-Powered Inclusive Education</h1>
       <p className="tagline">
         Bridging the digital divide through immersive learning experiences for rural students.
@@ -64,7 +73,7 @@ export default function Home() {
           width: 100%;
           height: 200%;
           background-image: radial-gradient(circle, rgba(255, 255, 255, 0.15) 2px, transparent 2px);
-          background-size: 100px 100px; /* Increased gap */
+          background-size: 100px 100px;
           background-repeat: repeat;
           animation: moveUp 20s linear infinite;
           z-index: 0;
@@ -77,6 +86,39 @@ export default function Home() {
           100% {
             background-position-y: -160px;
           }
+        }
+
+        .top-bar {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          right: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 2;
+        }
+
+        .nav-btn {
+          background: rgba(255, 255, 255, 0.15);
+          color: white;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          padding: 10px 16px;
+          border-radius: 8px;
+          font-size: 14px;
+          cursor: pointer;
+          backdrop-filter: blur(6px);
+          transition: background 0.3s ease, border 0.3s ease;
+        }
+
+        .nav-btn:hover {
+          background: rgba(255, 255, 255, 0.25);
+          border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .auth-buttons {
+          display: flex;
+          gap: 12px;
         }
 
         .title {
