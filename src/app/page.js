@@ -1,6 +1,8 @@
 'use client';
 
 import React from "react";
+import Link from 'next/link';
+
 
 export default function Home() {
   return (
@@ -22,20 +24,23 @@ export default function Home() {
       </p>
 
       <section className="features">
-        <div className="feature">
-          <h2>🎥 AI-Generated Video Lessons</h2>
-          <p>
-            Convert curriculum into interactive videos with local language narration. Ideal for students with low literacy or no access to qualified teachers.
-          </p>
-        </div>
+  <Link href="/ai-video-lessons" passHref>
+    <div className="feature" style={{ cursor: 'pointer' }}>
+      <h2>🎥 AI-Generated Video Lessons</h2>
+      <p>
+        Convert curriculum into interactive videos with local language narration. Ideal for students with low literacy or no access to qualified teachers.
+      </p>
+    </div>
+  </Link>
 
-        <div className="feature">
-          <h2>🤖 AI-Powered Doubt Solving Chatbot</h2>
-          <p>
-            Let students ask questions in their native language. The chatbot replies using voice-based explanations powered by STT & TTS technologies.
-          </p>
-        </div>
-      </section>
+  <div className="feature">
+    <h2>🤖 AI-Powered Doubt Solving Chatbot</h2>
+    <p>
+      Let students ask questions in their native language. The chatbot replies using voice-based explanations powered by STT & TTS technologies.
+    </p>
+  </div>
+</section>
+
 
       <footer className="footer">
         🚀 Empowering Education with AI • Made for Marginalized Communities
